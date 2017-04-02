@@ -45,7 +45,7 @@ class Playlist extends React.Component {
 					<div className="item">
 						<i className="big video play middle aligned icon"></i>
 						<div className="content middle aligned">
-							Tenacious D &mdash; Master Explorer
+							Tenacious D &mdash; Master Exploder
 						</div>
 					</div>
 				</div>
