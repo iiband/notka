@@ -1,0 +1,32 @@
+{
+  "name": "notka",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "gulp",
+    "start:prod": "gulp"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "semantic-ui": "^2.2.7"
+  },
+  "dependencies": {
+    "if-env": "^1.0.0"
+  }
+}

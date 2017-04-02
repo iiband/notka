@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/semantic/semantic.min.css">
+		<script src="assets/js/vendor.js"></script>
+		<script src="assets/semantic/semantic.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/pages/index.js"></script>
+		<style type="text/css">
+			.top.menu {
+				margin: 0;
+			}
+			.playlist {
+				margin-top: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainMenu" class="ui top inverted borderless menu">
+			<a class="item">
+				<i class="home icon"></i>
+			</a>
+			<div class="item right">
+				<div id="subscribe" class="ui animated fade inverted teal button" tabindex="0">
+					<div class="visible content">Sign-up for a Pro account</div>
+					<div class="hidden content">
+						$2.99 a month
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contentBody">
+			<div class="ui left vertical sidebar labeled icon menu">
+				<a class="item">
+					<i class="music icon"></i>
+					Songs
+				</a>
+				<a class="item">
+					<i class="block layout icon"></i>
+					Gallery
+				</a>
+				<a class="item">
+					<i class="content icon"></i>
+					Playlists
+				</a>
+			</div>
+			<div class="ui pusher">
+				<div class="ui grid">
+					<div class="four wide column">
+					</div>
+					<div class="eight wide column">
+						<div id="player"></div>
+						<div id="playlistSearch"></div>
+						<div id="playlist"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
