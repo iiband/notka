@@ -1,4 +1,12 @@
-class Player extends React.Component {
+import React from 'react'
+
+import PlayerControls from './PlayerControls'
+import PlayerStatus from './PlayerStatus'
+import PlayerActionBar from './PlayerActionBar'
+import PlayerAction from './PlayerAction'
+import AudioController from './AudioController'
+
+export default class Player extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {

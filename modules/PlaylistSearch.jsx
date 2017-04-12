@@ -1,4 +1,6 @@
-class PlaylistSearch extends React.Component {
+import React from 'react'
+
+export default class PlaylistSearch extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {

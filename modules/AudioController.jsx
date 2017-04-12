@@ -1,4 +1,4 @@
-class AudioController {
+export default class AudioController {
 	constructor(el) {
 		this.el = el
 	}

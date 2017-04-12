@@ -5,7 +5,7 @@ const config = {
   entry: './index.jsx',
 
   output: {
-    path: __dirname + '/public',
+    path: __dirname + '/target/webapp',
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -17,7 +17,11 @@ const config = {
   plugins: process.env.NODE_ENV === 'production' ? [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin()
-  ] : [ 
+  ] : [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
     
   ],
 
@@ -42,7 +46,7 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/, 
-        loader: 'babel-loader?presets[]=es2015&presets[]=react'
+        loader: 'babel-loader?presets[]=es2015&presets[]=react&compact=false'
       },
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
