@@ -14,6 +14,8 @@ import 'jquery/dist/jquery.js'
 import './semantic/dist/semantic.js'
 import './semantic/dist/semantic.css'
 
+import './modules/untitled.js'
+
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>

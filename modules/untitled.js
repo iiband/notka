@@ -1,22 +1,29 @@
+
 $(window).on('load', function() {
-    
-    ReactDOM.render(
-        React.createElement(Playlist, {
-        }, null),
-        document.getElementById('playlist')
-    );
 
-    ReactDOM.render(
-        React.createElement(PlaylistSearch, {
-        }, null),
-        document.getElementById('playlistSearch')
-    );
+    const SidebarController = function(el, timeout) {
+        this.el = el
+        this.timeout = timeout
+        this.timer = undefined
 
-    ReactDOM.render(
-        React.createElement(Player, {
-        }, null),
-        document.getElementById('player')
-    );
+        this.initiateHide = function() {
+            var self = this;
+            this.timer = setTimeout(function() {
+                self.el.sidebar('hide')
+                self.timer = undefined
+            }, this.timeout)
+        }
+
+        this.cancelHideOrShowAgain = function() {
+            if (this.timer) {
+                clearTimeout(this.timer)
+                this.timer = undefined
+            } else {
+                this.el.sidebar('show')
+            }
+        }
+    };
+
 
     var sidebarController = new SidebarController($('.ui.labeled.icon.sidebar'), 1000);
 
