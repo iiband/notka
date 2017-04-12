@@ -4,7 +4,6 @@ class Player extends React.Component {
 		this.state = {
 			playing: false,
 			track: {
-//				stream: 'music/song1.ogg',
 				stream: 'music/song2.mp3',
 				artist: 'Олександр Малінін',
 				title: 'Ой у лузі червона калина',

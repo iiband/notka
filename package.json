@@ -1,32 +1,81 @@
 {
   "name": "notka",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/iiband/5670.svg?branch=master)](https://travis-ci.org/iiband/5670)",
+  "main": "index.jsx",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "gulp",
-    "start:prod": "gulp"
+    "start:dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
+    "start:prod": "webpack && node server.js"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
     "beepbeep": "^1.2.0",
-    "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
     "gulp-newer": "^1.3.0",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.1.1",
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.22.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.5.0",
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
-    "semantic-ui": "^2.2.7"
+    "react-router": "^3.0.2",
+    "reactstrap": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3"
   },
   "dependencies": {
-    "if-env": "^1.0.0"
-  }
+    "better-console": "^1.0.0",
+    "body-parser": "^1.17.1",
+    "browser-sync": "^2.18.8",
+    "compression": "^1.6.2",
+    "config": "^1.25.1",
+    "crypto": "0.0.3",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-chmod": "^2.0.0",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-clone": "^1.0.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-dedupe": "0.0.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-header": "^1.8.8",
+    "gulp-help": "^1.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "if-env": "^1.0.0",
+    "require-dot-file": "^0.4.0",
+    "run-sequence": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iiband/notka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iiband/notka/issues"
+  },
+  "homepage": "https://github.com/iiband/notka#readme"
 }

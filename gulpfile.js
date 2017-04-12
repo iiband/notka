@@ -27,21 +27,21 @@ gulp.task('watch', ['process-resources'], function() {
     ]).on('change', browserSync.reload);
 
     gulp.watch([
-        "src/assets/js/*.js",
-        "src/assets/js/*.jsx"
+        "public/assets/js/*.js",
+        "public/assets/js/*.jsx"
     ], ['process-app-assets']).on('change', function() {});
 
     gulp.watch([
-        "src/assets/js/pages/*.js",
-        "src/assets/js/pages/*.jsx",
+        "public/assets/js/pages/*.js",
+        "public/assets/js/pages/*.jsx",
     ], ['process-page-assets']).on('change', function() {});
 
     gulp.watch([
-        "src/assets/css/*.css",
+        "public/assets/css/*.css",
     ], ['process-css']).on('change', function() {});
 
     gulp.watch([
-        "src/*.html",
+        "public/*.html",
     ], ['process-html']).on('change', function() {});
 
     gulp.watch([
@@ -94,8 +94,8 @@ gulp.task('process-vendor-assets', function() {
 // Concatenate our app sources to assets/js
 gulp.task('process-app-assets', function() {
     return gulp.src([
-            'src/assets/js/*.js',
-            'src/assets/js/*.jsx',
+            'public/assets/js/*.js',
+            'public/assets/js/*.jsx',
         ])
         .pipe(ignore(babel()))
         .pipe(eslint())
@@ -107,8 +107,8 @@ gulp.task('process-app-assets', function() {
 // Copy per-page scripts to assets/js/pages
 gulp.task('process-page-assets', function() {
     return gulp.src([
-            'src/assets/js/pages/*.js',
-            'src/assets/js/pages/*.jsx',
+            'public/assets/js/pages/*.js',
+            'public/assets/js/pages/*.jsx',
         ])
         .pipe(ignore(babel()))
         .pipe(eslint())
@@ -119,7 +119,7 @@ gulp.task('process-page-assets', function() {
 // Copy HTML to target root
 gulp.task('process-html', function() {
     return gulp.src([
-            "src/index.html"
+            "public/index.html"
         ])
         .pipe(gulp.dest('target/webapp'));
 });
@@ -127,7 +127,7 @@ gulp.task('process-html', function() {
 // Copy stylesheets to assets/css
 gulp.task('process-css', function() {
     return gulp.src([
-            "src/assets/css/*.css"
+            "public/assets/css/*.css"
         ])
         .pipe(gulp.dest('target/webapp/assets/css'));
 });
